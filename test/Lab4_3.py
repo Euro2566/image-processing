@@ -104,7 +104,7 @@ print(param_grid)
 #verbose: ระบุระดับของการแสดงผลในระหว่างกระบวนการค้นหา hyperparameter. ในที่นี้คุณใช้ verbose=10 เพื่อให้แสดงผลละเอียดมาก
 #cv: คือจำนวนของ fold ใน cross-validation ที่คุณต้องการใช้ในกระบวนการค้นหา. ในที่นี้ใช้ cv=2 หมายถึงการใช้ K-Fold Cross Validation โดยแบ่งข้อมูลออกเป็น 2 ส่วน
 #param_grid: คือ dictionary ที่ระบุค่าที่คุณต้องการทดลองสำหรับแต่ละ hyperparameter ในโมเดลของคุณ เช่นค่า batch_size, epochs, optimizer, และ learning_rate ที่ต้องการทดลอง
-'''
+
 grid = GridSearchCV(estimator=model, n_jobs=1, verbose= 10, cv=2, param_grid=param_grid)
 grid_result = grid.fit(train_x_noise, train_x)
 
@@ -121,7 +121,7 @@ print(f'Best score : {best_score}')
 
 for mean,stdev,param in zip(means,stds,params):
     print("%f (%f) whit: %r" % (mean,stdev,param))
-'''
+
 
 
 
